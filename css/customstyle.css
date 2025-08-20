@@ -1,0 +1,281 @@
+/* Dicas de Segurança */
+.safety-tips {
+  background-color: #f8f9fa;
+  padding: 60px 0;
+}
+
+.safety-tips h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #333;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.safety-tips .tip {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.safety-tips .tip:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.safety-tips .tip h4 {
+  font-size: 22px;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.safety-tips .tip p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Ícones nas Dicas de Segurança */
+.safety-tips .tip::before {
+  content: "\f084"; /* Exemplo de ícone FontAwesome (use ícones apropriados) */
+  font-family: "FontAwesome";
+  font-size: 40px;
+  color: #007bff;
+  display: block;
+  margin: 0 auto 15px;
+}
+
+/* Testemunhos */
+.testimonials {
+  background-color: #e9ecef;
+  padding: 60px 0;
+}
+
+.testimonials h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #333;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.testimonials .testimonial {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.testimonials .testimonial:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.testimonials .testimonial p {
+  font-size: 18px;
+  font-style: italic;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.testimonials .testimonial h5 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #007bff;
+}
+
+/* Melhore a responsividade */
+@media (max-width: 768px) {
+  .safety-tips .tip,
+  .testimonials .testimonial {
+    margin-bottom: 20px;
+  }
+}
+
+/* Footer Styles */
+.site-footer {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 40px 0;
+}
+
+.site-footer a {
+  color: #ecf0f1;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.site-footer a:hover {
+  color: #3498db;
+}
+
+.footer-top {
+  border-bottom: 1px solid #34495e;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+.footer-top h4 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-top h4::after {
+  content: "";
+  width: 50px;
+  height: 2px;
+  background-color: #3498db;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.contact-info li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.contact-info li i {
+  margin-right: 10px;
+  color: #3498db;
+}
+
+.quick-links li {
+  margin-bottom: 10px;
+}
+
+.footer-bottom {
+  padding-top: 20px;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.social-icons a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+  background-color: #34495e;
+  color: #ecf0f1;
+  border-radius: 50%;
+  line-height: 35px;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  background-color: #3498db;
+  color: #fff;
+}
+
+/* Responsividade */
+@media (max-width: 767px) {
+  .footer-top {
+    text-align: center;
+  }
+
+  .footer-top .col-md-4,
+  .footer-top .col-sm-6,
+  .footer-top .col-sm-12 {
+    margin-bottom: 20px;
+  }
+
+  .footer-bottom .social-icons {
+    margin-top: 10px;
+  }
+}
+
+/* Estilos Personalizados */
+.navbar-brand img {
+  width: 60px;
+  height: auto;
+}
+
+.navbar-nav .nav-link {
+  margin-right: 15px;
+  transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #3498db;
+}
+
+.btn-primary {
+  background-color: #3498db;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #2980b9;
+}
+
+/* Ajustes para o Menu Mobile */
+@media (max-width: 767.98px) {
+  .navbar-nav {
+    text-align: center;
+  }
+  .navbar-nav .nav-link {
+    margin-right: 0;
+    padding: 10px 0;
+  }
+}
+.uni-shortcode-icon-box-1-default {
+  border: 1px solid #e0e0e0; /* Light border for cards */
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden; /* Prevents overflow of child elements */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+  background-color: #ffffff; /* White background for contrast */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  margin: 15px; /* Margin around cards */
+  text-align: center; /* Center-align text */
+}
+
+.uni-shortcode-icon-box-1-default:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.item-icons img {
+  width: 100%; /* Make the image responsive */
+  height: auto; /* Maintain aspect ratio */
+  border-bottom: 1px solid #e0e0e0; /* Divider below the image */
+}
+
+.item-caption h4 {
+  font-size: 1.2em; /* Larger font for agency name */
+  color: #333; /* Darker color for text */
+}
+
+.item-caption h3 {
+  font-size: 1em; /* Standard font size */
+  color: #555; /* Grey color for phone number and email */
+  margin: 5px 0; /* Margin between elements */
+}
+
+.uni-home-title h3 {
+  font-size: 2em; /* Larger title */
+  margin-bottom: 0px; /* Space below the title */
+}
+
+.uni-underline {
+  width: 50px; /* Underline width */
+  height: 2px; /* Underline height */
+  background: #007bff; /* Underline color */
+  margin: 0 auto; /* Center the underline */
+}

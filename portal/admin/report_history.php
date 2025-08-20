@@ -1,0 +1,104 @@
+<?php include 'includes/head.php'; ?>
+
+<body>
+    <div class="main-wrapper">
+        <?php include 'includes/navigation.php'; ?>
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-inner slimscroll">
+                <div id="sidebar-menu" class="sidebar-menu">
+                    <ul>
+                        <li class="menu-title">Menú</li>
+                        <li class="">
+                            <a href="index.php"><i class="fa fa-dashboard"></i> <span>Início</span></a>
+                        </li>
+                        <li class="">
+                            <a href="agency.php"><i class="fa fa-user-md"></i> <span>Agencias</span></a>
+                        </li>
+                        <li>
+                            <a href="emergency_type.php"><i class="fa fa-wheelchair"></i> <span>Tipos de Emergências</span></a>
+                        </li>
+                        <?php
+                        // include('../connect.php');
+                        $result = $db->prepare("SELECT count(*) as total FROM emergency WHERE status = 'Pendente'");
+                        $result->execute();
+                        for ($i = 0; $row = $result->fetch(); $i++) {
+                        ?>
+                            <li>
+                                <a href="view-emergency.php"><i class="fa fa-file"></i> <span>Ver Emergências</span> <span class="badge badge-pill bg-primary float-right"><?php echo $row['total']; ?></span></a>
+                            </li>
+                        <?php } ?>
+                        <li>
+                            <a href="report-emergency.php"><i class="fa fa-heartbeat"></i> <span>Reportar Emergência</span></a>
+                        </li>
+                        <li class="active">
+                            <a href="report_history.php"><i class="fa fa-file-text-o"></i> <span>Histórico de Emergências</span></a>
+                        </li>
+                        <li>
+                            <a href="users.php"><i class="fa fa-user-plus"></i> <span>Gerir Admin</span></a>
+                        </li>
+                        <li>
+                        </li>
+                        <li>
+                            <a href="logout.php"><i class="fa fa-power-off"></i> <span>Sair</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-wrapper">
+        <div class="content">
+            <div class="row">
+                <div class="col-sm-7 col-6">
+                    <h4 class="page-title">Meu Histórico</h4>
+                </div>
+
+
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card-box mb-0">
+                        <h3 class="card-title">Histórico</h3>
+                        <div class="experience-box">
+                            <ul class="experience-list">
+                                <?php
+                                $result = $db->prepare("SELECT * FROM emergency WHERE victim_id = {$_SESSION['SESS_AGENCY_ID']} AND status = 'Resolvido' ");
+                                $result->execute();
+                                for ($i = 1; $row = $result->fetch(); $i++) {
+
+                                ?>
+
+                                    <li>
+                                        <div class="experience-user">
+                                            <div class="before-circle"></div>
+                                        </div>
+                                        <div class="experience-content">Voçe reportou <?php echo $row['case_severity']; ?> <?php echo $row['emergency_category']; ?>
+                                            <div class="timeline-content">at <?php echo $row['address']; ?>, <?php echo $row['state']; ?>
+                                                <span class="time"><?php echo $row['date']; ?></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                <?php } ?>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    </div>
+    <div class="sidebar-overlay" data-reff=""></div>
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.slimscroll.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+
+
+<!-- profile23:03-->
+
+</html>

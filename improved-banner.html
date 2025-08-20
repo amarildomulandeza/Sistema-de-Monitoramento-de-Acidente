@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banner com Carousel</title>
+    
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    
+    <!-- Animate.css para animações -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Estilos do Banner */
+        .uni-banner {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .uni-banner .item {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Imagens de Background */
+        .uni-banner-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: 1;
+        }
+
+        /* Overlay escuro para melhor legibilidade do texto */
+        .uni-banner-img::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 2;
+        }
+
+        /* Classes específicas para cada imagem */
+        .uni-background-5 {
+            background-image: url('/images/home1/banner/local.jpg?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+        }
+
+        .uni-background-6 {
+            background-image: url('/images/home1/banner/reporte.jpg?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+        }
+
+        .uni-background-7 {
+            background-image: url('/images/home1/banner/contacto.jpg?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+        }
+
+        /* Conteúdo do Banner */
+        .content {
+            position: relative;
+            z-index: 3;
+            width: 100%;
+            text-align: center;
+            color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .caption h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .caption h1 {
+                font-size: 2.5rem;
+            }
+            
+            .uni-banner .item {
+                height: 70vh;
+            }
+            
+            .uni-banner {
+                height: 70vh;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .caption h1 {
+                font-size: 1.8rem;
+            }
+        }
+
+        /* Customização dos controles do Owl Carousel */
+        .owl-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            z-index: 4;
+        }
+
+        .owl-nav button.owl-prev,
+        .owl-nav button.owl-next {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.2) !important;
+            color: white !important;
+            border: 2px solid rgba(255, 255, 255, 0.5) !important;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 20px !important;
+            transition: all 0.3s ease;
+        }
+
+        .owl-nav button.owl-prev:hover,
+        .owl-nav button.owl-next:hover {
+            background: rgba(255, 255, 255, 0.8) !important;
+            color: #333 !important;
+        }
+
+        .owl-nav button.owl-prev {
+            left: 30px;
+        }
+
+        .owl-nav button.owl-next {
+            right: 30px;
+        }
+
+        /* Indicadores (dots) */
+        .owl-dots {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 4;
+        }
+
+        .owl-dots .owl-dot {
+            display: inline-block;
+            margin: 0 8px;
+        }
+
+        .owl-dots .owl-dot span {
+            display: block;
+            width: 12px;
+            height: 12px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .owl-dots .owl-dot.active span,
+        .owl-dots .owl-dot:hover span {
+            background: white;
+            transform: scale(1.2);
+        }
+
+        /* Animações personalizadas */
+        .animate__animated {
+            animation-duration: 1s;
+            animation-fill-mode: both;
+        }
+
+        .animate__flipInX {
+            animation-name: flipInX;
+        }
+
+        @keyframes flipInX {
+            from {
+                transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+                animation-timing-function: ease-in;
+                opacity: 0;
+            }
+
+            40% {
+                transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+                animation-timing-function: ease-in;
+            }
+
+            60% {
+                transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+                opacity: 1;
+            }
+
+            80% {
+                transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+            }
+
+            to {
+                transform: perspective(400px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- BANNER -->
+    <div class="uni-banner">
+        <div class="uni-owl-one-item owl-carousel owl-theme">
+            <div class="item">
+                <div class="uni-banner-img uni-background-6"></div>
+                <div class="content animate__animated animate__flipInX animate__delay-1s">
+                    <div class="container">
+                        <div class="caption">
+                            <h1>Reporte os Acidentes no seu Bairro</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="uni-banner-img uni-background-5"></div>
+                <div class="content animate__animated animate__flipInX animate__delay-1s">
+                    <div class="container">
+                        <div class="caption">
+                            <h1>Acompanhe o Mapeamento das Regiões Perigosas</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="uni-banner-img uni-background-7"></div>
+                <div class="content animate__animated animate__flipInX animate__delay-1s">
+                    <div class="container">
+                        <div class="caption">
+                            <h1>Encontre os Contactos das Agências de Emergência</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            $('.uni-owl-one-item').owlCarousel({
+                items: 1,
+                loop: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplayHoverPause: true,
+                nav: true,
+                dots: true,
+                animateOut: 'fadeOut',
+                animateIn: 'fadeIn',
+                smartSpeed: 1000,
+                responsive: {
+                    0: {
+                        nav: false
+                    },
+                    768: {
+                        nav: true
+                    }
+                }
+            });
+
+            // Reiniciar animações quando o slide muda
+            $('.uni-owl-one-item').on('changed.owl.carousel', function(event) {
+                var currentItem = $('.owl-item.active .content');
+                currentItem.removeClass('animate__animated animate__flipInX');
+                
+                setTimeout(function() {
+                    currentItem.addClass('animate__animated animate__flipInX');
+                }, 100);
+            });
+        });
+    </script>
+</body>
+</html>
