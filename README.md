@@ -1,10 +1,10 @@
 O SISTEMA DE MONITORAMENTO DE ACIDENTES é uma plataforma online desenvolvida em PHP e MySQL que facilita o relato e o gerenciamento de incidentes imediatos e situações de emergência. Seja um acidente de trânsito, atividade criminosa ou um problema de saúde, o sistema oferece uma maneira rápida e eficiente de notificar e alertar as autoridades e equipes de resposta apropriadas.
 
-## Key Features
+## Principais características
 
 - **Relatórios de Incidentes:** Os usuários podem facilmente enviar relatórios de incidentes por meio de nossa interface intuitiva e amigável, alimentada por um modelo de front-end disponível em www.templateshub.net/.
 
-- **Notificação em Tempo Real:** O sistema utiliza um mecanismo de notificação em tempo real, alertando instantaneamente as autoridades e os socorristas sobre novos relatórios de incidentes, garantindo uma ação rápida.
+- **Notificação em Tempo Real:** O sistema utiliza um mecanismo de notificação em tempo real, recebendo alertas do sistema Inteligente de Monitoramento por cameras de vigilancia e em seguida alertando instantaneamente as autoridades e os socorristas sobre novos relatórios de incidentes, garantindo uma ação rápida.
 
 - **Categorização e Priorização:** Os incidentes são categorizados automaticamente com base no tipo e na gravidade, permitindo que os socorristas priorizem suas ações de forma eficaz.
 
