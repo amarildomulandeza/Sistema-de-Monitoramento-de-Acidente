@@ -1,91 +1,91 @@
-The SISTEMA DE MONITORAMENTO DE ACIDENTES is an online platform developed using PHP and MySQL that facilitates the reporting and management of immediate incidents and emergency situations. Whether it's a vehicle accident, criminal activity, or health scare, the system provides a quick and efficient way to notify and alert the appropriate authorities and responders.
+O SISTEMA DE MONITORAMENTO DE ACIDENTES é uma plataforma online desenvolvida em PHP e MySQL que facilita o relato e o gerenciamento de incidentes imediatos e situações de emergência. Seja um acidente de trânsito, atividade criminosa ou um problema de saúde, o sistema oferece uma maneira rápida e eficiente de notificar e alertar as autoridades e equipes de resposta apropriadas.
 
 ## Key Features
 
-- **Incident Reporting:** Users can easily submit incident reports through our intuitive and user-friendly interface, powered by a frontend template from www.templateshub.net/.
+- **Relatórios de Incidentes:** Os usuários podem facilmente enviar relatórios de incidentes por meio de nossa interface intuitiva e amigável, alimentada por um modelo de front-end disponível em www.templateshub.net/.
 
-- **Real-time Notification:** The system employs a real-time notification mechanism, instantly alerting authorities and responders to new incident reports, ensuring swift action.
+- **Notificação em Tempo Real:** O sistema utiliza um mecanismo de notificação em tempo real, alertando instantaneamente as autoridades e os socorristas sobre novos relatórios de incidentes, garantindo uma ação rápida.
 
-- **Categorization and Prioritization:** Incidents are automatically categorized based on type and severity, allowing responders to prioritize their actions effectively.
+- **Categorização e Priorização:** Os incidentes são categorizados automaticamente com base no tipo e na gravidade, permitindo que os socorristas priorizem suas ações de forma eficaz.
 
-- **Geo-location Mapping:** The system captures and displays incident locations on a map, aiding in resource allocation and navigation for responders.
+- **Mapeamento de Geolocalização:** O sistema captura e exibe a localização dos incidentes em um mapa, auxiliando na alocação de recursos e na navegação dos socorristas.
 
-- **User Accounts:** Users can create accounts to access additional features, view their reported incidents, and receive status updates on their reports.
+- **Contas de Usuário:** Os usuários podem criar contas para acessar recursos adicionais, visualizar os incidentes relatados e receber atualizações de status sobre seus relatórios.
 
-## Installation
+## Instalação
 
-To set up the SISTEMA DE MONITORAMENTO DE ACIDENTES locally, follow these steps:
+Para configurar o SISTEMA DE MONITORAMENTO DE ACIDENTES localmente, siga estes passos:
 
-1. Clone this repository to your local machine:
+1. Clone este repositório para sua máquina local:
 
    ```
-   git clone https://github.com/jona-odoh/emergency-management-system.git
+   git clone https://github.com/amarildomulandeza/Sistema-de-Monitoramento-de-Acidente.git
    ```
 
-2. Import the provided MySQL database schema and data to your local MySQL server.
+2. Importe o esquema e os dados do banco de dados MySQL fornecidos para o seu servidor MySQL local.
 
-3. Configure the necessary database connection settings in the PHP files.
+3. Configure as configurações de conexão do banco de dados necessárias nos arquivos PHP.
 
-4. Start a local PHP development server or deploy the system to your preferred PHP server.
+4. Inicie um servidor de desenvolvimento PHP local ou implante o sistema no servidor PHP de sua preferência.
 
-5. Access the system through your browser at `http://localhost:your-port`.
+5. Acesse o sistema pelo seu navegador em `http://localhost:sua-porta`.
 
-## Usage
+## Uso
 
-1. Register or log in with your user account to access the reporting dashboard.
+1. Registre-se ou faça login com sua conta de usuário para acessar o painel de relatórios.
 
-2. Fill out the incident report form, providing all relevant information about the emergency.
+2. Preencha o formulário de relatório de incidente, fornecendo todas as informações relevantes sobre a emergência.
 
-3. Submit the report, and the system will automatically notify the designated authorities and responders.
+3. Envie o relatório e o sistema notificará automaticamente as autoridades e os socorristas designados.
 
-## Login Credentials:
+## Credenciais de Login:
 
 - Admin: <br>
-  Username: admin <br>
-  Password: admin <br>
+Nome de Usuário: admin <br>
+Senha: admin <br>
 
-- Agency: <br>
-  Username: police <br>
-  Password: 12345 <br>
+- Agência: <br>
+Nome de Usuário: police <br>
+Senha: 12345 <br>
 
-- Users: <br>
-  Username: jona <br>
-  Password: jona <br>
+- Usuários: <br>
+Nome de Usuário: jona <br>
+Senha: jona <br>
 
-## Contributing
+## Contribuindo
 
-i welcome contributions to enhance the SISTEMA DE MONITORAMENTO DE ACIDENTES. To contribute, follow these steps:
+Contribuições para aprimorar o SISTEMA DE MONITORAMENTO DE ACIDENTES são bem-vindas. Para contribuir, siga estes passos:
 
-1. Fork the repository.
+1. Faça um fork do repositório.
 
-2. Create a new branch for your contributions:
+2. Crie uma nova branch para suas contribuições:
 
-   ```
-   git checkout -b feature/new-feature
-   ```
+```
+git checkout -b feature/new-feature
+```
 
-3. Make your changes and commit them:
+3. Faça suas alterações e envie-as:
 
-   ```
-   git commit -m "Add new feature"
-   ```
+```
+git commit -m "Add new feature"
+```
 
-4. Push your changes to your fork:
+4. Envie suas alterações para o seu fork:
 
-   ```
-   git push origin feature/new-feature
-   ```
+```
+git push origin feature/new-feature
+```
 
-5. Open a pull request to the main repository.
+5. Abra um pull request para o repositório principal.
 
-i will review your changes and work with you to address any feedback before merging.
+Revisarei suas alterações e trabalharei com você para responder a qualquer feedback antes da fusão.
 
-## License
+## Licença
 
-This project is licensed under the [MIT License].
+Este projeto está licenciado sob a [Licença MIT].
 
-## Contact
+## Contato
 
-For any inquiries or support, feel free to reach out to me at jonathanodoh3140@gmail.com.
+Para dúvidas ou suporte, sinta-se à vontade para entrar em contato comigo pelo e-mail amarildomulandeza@gmail.com.
 
 ---
